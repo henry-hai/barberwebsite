@@ -354,7 +354,7 @@
                         <label for="dates">Preferred Dates (Up to 3):</label>
                         <textarea id="dates" name="dates" rows="3" required></textarea>
                     </div>
-                    <button type="button" onclick="submitAppointmentForm()">Submit</button>
+                    <button type="button" onclick="sendEmail()">Submit</button>
                 </form>
             </div>
         </div>
@@ -365,18 +365,18 @@
             var name = document.getElementById('name').value;
             var phone = document.getElementById('phone').value;
             var dates = document.getElementById('dates').value;
-
+    
             if (!name || !phone || !dates) {
                 alert('Please fill all the fields.');
                 return;
             }
-
+    
             var templateParams = {
                 name: name,
                 phone: phone,
                 dates: dates
             };
-
+    
             emailjs.send('service_2k9xp7s', 'contact_form', templateParams)
                 .then(function(response) {
                     console.log('SUCCESS!', response.status, response.text);
@@ -387,9 +387,8 @@
                     alert('Failed to send the appointment request. Please try again.');
                 });
         }
-    </script>
+    </script>    
          
 </body>
 </html>
-
 

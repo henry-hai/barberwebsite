@@ -1,0 +1,215 @@
+/* Reset CSS */
+body, h1, h2, h3, h4, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+/* Global styles */
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Header styles */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Section styles */
+section {
+    margin: 20px 0;
+    padding: 0 20px;
+}
+
+/* Introduction section styles */
+#introduction {
+    display: flex;
+    align-items: flex-start; /* Align items at the start of the container */
+    justify-content: space-between;
+    max-width: 800px; /* Limit introduction section width */
+    margin: 0 auto; /* Center align */
+    padding: 20px 0; /* Add some padding */
+}
+
+.intro-left, .intro-right {
+    flex: 1;
+    text-align: center; /* Align text to the center */
+    margin-top: 20px; /* Add margin to the top */
+}
+
+.intro-right h2 {
+    margin-bottom: 20px; /* Add space below the header */
+    border-bottom: 2px solid #ccc; /* Underline for title */
+    padding-bottom: 10px;
+}
+
+.portrait-container {
+    display: flex; /* Ensure both portrait photos are displayed in a row */
+    justify-content: center; /* Align items (portrait photos) horizontally */
+    margin-top: 20px; /* Add margin to separate portraits from header */
+}
+
+.portrait, .logo {
+    max-width: 300px; /* Adjust the max-width of the portrait/logo */
+    height: auto; /* Maintain aspect ratio */
+    margin: 0 10px; /* Add some horizontal space between the portrait photos */
+}
+
+/* Center align availability and payment */
+.availability, .payment {
+    text-align: center; /* Center align text */
+    margin-bottom: 20px; /* Add space below text */
+}
+
+/* Photo gallery styles */
+#photo-gallery {
+    text-align: center;
+}
+
+#photo-gallery h2 {
+    border-bottom: 2px solid #ccc; /* Underline for title */
+    padding-bottom: 10px;
+    margin-bottom: 20px; /* Added to separate title from content */
+}
+
+.photo-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 5 columns */
+    grid-gap: 15px;
+}
+
+/* might remove
+.photo {
+    margin-bottom: 0px;
+}
+*/
+
+.photo img {
+    width: 100%;
+    height: auto;
+}
+
+/* Menu section styles */
+#menu {
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+
+.menu-title, .menu-section h3 {
+    text-align: center;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #ccc; /* Line under titles */
+    padding-bottom: 10px;
+}
+
+.menu-columns {
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu-column {
+    width: 48%;
+}
+
+.menu-section {
+    margin-bottom: 30px; /* Increased space between menu sections */
+}
+
+.menu-item {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 20px; /* Increased space between menu item and separator */
+}
+
+.menu-item:last-child {
+    border-bottom: none; /* Remove border from last menu item */
+}
+
+.menu-description {
+    flex: 2;
+}
+
+.menu-price {
+    flex: 1;
+    text-align: right;
+}
+
+/* Appointment section styles */
+#appointment {
+    padding: 20px;
+    background-color: #f4f4f4;
+    margin: 20px 0;
+}
+
+.appointment-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.booking-policies, .appointment-form {
+    flex: 1;
+    margin-right: 20px; /* Add space between columns */
+}
+
+.booking-policies h2, .appointment-form h2 {
+    margin-bottom: 20px;
+    border-bottom: 2px solid #ccc; /* Line under titles */
+    padding-bottom: 10px;
+}
+
+ul {
+    list-style: none; /* Removes bullets */
+    padding: 0;
+    margin: 0 0 20px 0;
+}
+
+ul li {
+    padding: 5px 0;
+    line-height: 1.6; /* Increase line height for readability */
+    border-bottom: 1px solid #ccc; /* Adds a separator for each policy */
+}
+
+ul li:last-child {
+    border-bottom: none;
+}
+
+.form-group {
+    margin-bottom: 10px;
+}
+
+.form-group label {
+    display:block;
+    margin-bottom: 5px;
+}
+
+.form-group input[type="text"],
+.form-group input[type="tel"],
+.form-group textarea {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box; /* Include padding and border in the element's width */
+}
+
+button {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+
+
+
+
+
+
+
+

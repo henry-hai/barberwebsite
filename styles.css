@@ -205,6 +205,24 @@ button:hover {
     background-color: #555;
 }
 
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    #introduction {
+        flex-direction: column;  /* Stack the flex items vertically on small screens */
+        align-items: center; /* Center-align the items for aesthetics */
+    }
+
+    .intro-left, .intro-right {
+        width: 100%; /* Allow each section to take full width of the container */
+        text-align: center; /* Center the text for better readability on small devices */
+        margin-top: 0; /* Adjust margin as needed */
+    }
+
+    .portrait, .logo {
+        max-width: 80%; /* Increase the size of images slightly for mobile */
+        margin: 20px auto; /* Center the images and add vertical spacing */
+    }
+}
 
 
 

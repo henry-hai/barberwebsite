@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Barber Website</title>
     <link rel="stylesheet" href="styles.css">
+    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            emailjs.init('_z_xS9r4pjxPzvOKs'); 
+        })();
+    </script>
 </head>
 <body>
 
@@ -355,21 +361,34 @@
     </section>
 
     <script>
-        function submitAppointmentForm() {
+        function sendEmail() {
             var name = document.getElementById('name').value;
             var phone = document.getElementById('phone').value;
             var dates = document.getElementById('dates').value;
-        
+
             if (!name || !phone || !dates) {
                 alert('Please fill all the fields.');
                 return;
             }
 
-            alert('Thank you, ' + name + '! Your appointment request has been received.'); // display a message.
-            document.getElementById('appointment-form').reset(); // clear the form
+            var templateParams = {
+                name: name,
+                phone: phone,
+                dates: dates
+            };
+
+            emailjs.send('service_2k9xp7s', 'contact_form', templateParams)
+                .then(function(response) {
+                    console.log('SUCCESS!', response.status, response.text);
+                    alert('Thank you, ' + name + '! Your appointment request has been sent.');
+                    document.getElementById('appointment-form').reset();
+                }, function(error) {
+                    console.log('FAILED...', error);
+                    alert('Failed to send the appointment request. Please try again.');
+                });
         }
     </script>
-        
+         
 </body>
 </html>
 

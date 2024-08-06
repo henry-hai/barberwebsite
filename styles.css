@@ -7,14 +7,65 @@ body, h1, h2, h3, h4, p, ul, li {
 /* Global styles */
 body {
     font-family: Arial, sans-serif;
+    padding-top: 40px; /* Adjust according to your header height */
 }
 
 /* Header styles */
 header {
-    background-color: #333;
+    background-color: #708090
+    ;
     color: #fff;
-    padding: 20px;
+    padding: 10px 20px;
     text-align: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+}
+
+.hamburger-menu {
+    cursor: pointer;
+    font-size: 24px;
+    margin-right: 20px;
+}
+
+.header-logo {
+    max-width: 50px;
+    height: auto;
+}
+
+.navbar {
+    display: none;
+    flex-direction: column;
+    background-color: #c8ced5;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.navbar.show {
+    display: flex;
+}
+
+.navbar a {
+    padding: 10px;
+    text-decoration: none;
+    color: black;
+    display: block;
+}
+
+.navbar a:hover {
+    background-color: #8694a1;
 }
 
 /* Section styles */
@@ -208,19 +259,19 @@ button:hover {
 /* Responsive adjustments for smaller screens */
 @media (max-width: 768px) {
     #introduction {
-        flex-direction: column;  /* Stack the flex items vertically on small screens */
-        align-items: center; /* Center-align the items for aesthetics */
+        flex-direction: column;  /* stack flex items vertically on small screens */
+        align-items: center; 
     }
 
     .intro-left, .intro-right {
-        width: 100%; /* Allow each section to take full width of the container */
-        text-align: center; /* Center the text for better readability on small devices */
-        margin-top: 0; /* Adjust margin as needed */
+        width: 100%; /* allow each section to take full width of container */
+        text-align: center; /* center the text for better readability on small devices */
+        margin-top: 0; 
     }
 
     .portrait, .logo {
-        max-width: 80%; /* Increase the size of images slightly for mobile */
-        margin: 20px auto; /* Center the images and add vertical spacing */
+        max-width: 80%; /* inc size of images slightly for mobile */
+        margin: 20px auto; /* center the images & add vertical spacing */
     }
 }
 

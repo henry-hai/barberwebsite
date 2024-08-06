@@ -4,19 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Barber Website</title>
-    <link rel="stylesheet" href="styles.css">
-    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
-    <script type="text/javascript">
-        (function() {
-            emailjs.init('_z_xS9r4pjxPzvOKs'); 
-        })();
-    </script>
+    <link rel="stylesheet" href="styles_TEST.css">
 </head>
 <body>
-
     <header>
-        <h1>WELCOME!</h1>
+        <div class="header-content">
+            <div class="hamburger-menu" onclick="toggleMenu()">
+                &#9776;
+            </div>
+            <img src="smallLogo.JPG" alt="Barbershop Logo" class="header-logo">
+        </div>
+        <nav id="navbar" class="navbar">
+            <a href="#introduction">Home</a>
+            <a href="#menu">Menu</a>
+            <a href="#photo-gallery">Photo Gallery</a>
+            <a href="#appointment">Book an Appointment</a>
+        </nav>
     </header>
+
+    <script>
+        function toggleMenu() {
+            var navbar = document.getElementById("navbar");
+            navbar.classList.toggle("show");
+        }
+    </script>
 
     <section id="introduction">
         <div class="intro-left">
@@ -27,7 +38,7 @@
             </div>
             <div class="payment">
                 <h3>Forms of Payment </h3>
-                <p>Zelle: 4088587047 <br>Venmo: @henryhai <br> Cash </p>
+                <p>Zelle(Preferred): 4088587047 <br>Venmo: @henryhai <br> Cash </p>
             </div>
         </div>
         <div class="intro-right">
@@ -37,108 +48,6 @@
             <div class="portrait-container">
                 <img src="intro_portrait.jpg" alt="Portrait" class="portrait">
                 <!-- <img src="intro_portrait2.jpg" alt="Second Portrait" class="portrait"> -->
-            </div>
-        </div>
-    </section>
-    
-    <section id="photo-gallery">
-        <h2>HAIRCUT GALLERY</h2>
-        <div class="photo-grid">
-            <!-- Row 1-->
-            <div class="photo">
-                <img src="1_Murthi_1.JPG" alt="Haircut 1">
-            </div>
-            <div class="photo">
-                <img src="2_Murthi_2.JPG" alt="Haircut 2">
-            </div>
-            <div class="photo">
-                <img src="3_Jason_1.JPG" alt="Haircut 3">
-            </div>
-            <div class="photo">
-                <img src="4_KSG_1.JPG" alt="Haircut 4">
-            </div>
-            <div class="photo">
-                <img src="5_KSG_2.JPG" alt="Haircut 5">
-            </div>
-            <!-- Row 2-->
-            <div class="photo">
-                <img src="6_Alex_1.JPG" alt="Haircut 6">
-            </div>
-            <div class="photo">
-                <img src="7_Alex_2.JPG" alt="Haircut 7">
-            </div>
-            <div class="photo">
-                <img src="8_Adrian_1.JPG" alt="Haircut 8">
-            </div>
-            <div class="photo">
-                <img src="9_Adrian_2.JPG" alt="Haircut 9">
-            </div>
-            <div class="photo">
-                <img src="10_Adrian_3.JPG" alt="Haircut 10">
-            </div>
-            <!-- Row 3-->
-            <div class="photo">
-                <img src="11_Elijah_2.JPG" alt="Haircut 11">
-            </div>
-            <div class="photo">
-                <img src="12_Elijah_2.JPG" alt="Haircut 12">
-            </div>
-            <div class="photo">
-                <img src="13_Jason_2.JPG" alt="Haircut 13">
-            </div>
-            <div class="photo">
-                <img src="14_Chester_1.JPG" alt="Haircut 14">
-            </div>
-            <div class="photo">
-                <img src="15_Chester_2.JPG" alt="Haircut 15">
-            </div>
-            <!-- Row 4-->
-            <div class="photo">
-                <img src="16_Ben_1.JPG" alt="Haircut 16">
-            </div>
-            <div class="photo">
-                <img src="17_Ben_2.JPG" alt="Haircut 17">
-            </div>
-            <div class="photo">
-                <img src="18_Ben_3.JPG" alt="Haircut 18">
-            </div>
-            <div class="photo">
-                <img src="19_Cam_1.jpg" alt="Haircut 19">
-            </div>
-            <div class="photo">
-                <img src="20_Cam_2.jpg" alt="Haircut 20">
-            </div>
-            <!-- Row 5 -->
-            <div class="photo">
-                <img src="21_RR_1.JPG" alt="Haircut 21">
-            </div>
-            <div class="photo">
-                <img src="22_RR_2.JPG" alt="Haircut 22">
-            </div>
-            <div class="photo">
-                <img src="23_RR_3.JPG" alt="Haircut 23">
-            </div>
-            <div class="photo">
-                <img src="24_RR_4.JPG" alt="Haircut 24">
-            </div>
-            <div class="photo">
-                <img src="25_Andrew_1.JPG" alt="Haircut 25">
-            </div>
-            <!-- Row 6 -->
-            <div class="photo">
-                <img src="26_Hoang_1.jpg" alt="Haircut 26">
-            </div>
-            <div class="photo">
-                <img src="27_JD_1.jpg" alt="Haircut 27">
-            </div>
-            <div class="photo">
-                <img src="28_JD_2.jpg" alt="Haircut 28">
-            </div>
-            <div class="photo">
-                <img src="29_Dev_1.JPG" alt="Haircut 29">
-            </div>
-            <div class="photo">
-                <img src="30_Dev_2.JPG" alt="Haircut 30">
             </div>
         </div>
     </section>
@@ -166,7 +75,7 @@
             
                     <div class="menu-item">
                         <div class="menu-description">
-                            <h4>Scissor + Clipper Cut</h4>
+                            <h4>Clipper + Scissor Cut</h4>
                             <p>Clipper cut using scissorwork to trim the top</p>
                         </div>
                         <div class="menu-price">
@@ -327,6 +236,108 @@
         </div>
     </section>    
     
+    <section id="photo-gallery">
+        <h2>PHOTO GALLERY</h2>
+        <div class="photo-grid">
+            <!-- Row 1-->
+            <div class="photo">
+                <img src="1_Murthi_1.JPG" alt="Haircut 1">
+            </div>
+            <div class="photo">
+                <img src="2_Murthi_2.JPG" alt="Haircut 2">
+            </div>
+            <div class="photo">
+                <img src="3_Jason_1.JPG" alt="Haircut 3">
+            </div>
+            <div class="photo">
+                <img src="4_KSG_1.JPG" alt="Haircut 4">
+            </div>
+            <div class="photo">
+                <img src="5_KSG_2.JPG" alt="Haircut 5">
+            </div>
+            <!-- Row 2-->
+            <div class="photo">
+                <img src="6_Alex_1.JPG" alt="Haircut 6">
+            </div>
+            <div class="photo">
+                <img src="7_Alex_2.JPG" alt="Haircut 7">
+            </div>
+            <div class="photo">
+                <img src="8_Adrian_1.JPG" alt="Haircut 8">
+            </div>
+            <div class="photo">
+                <img src="9_Adrian_2.JPG" alt="Haircut 9">
+            </div>
+            <div class="photo">
+                <img src="10_Adrian_3.JPG" alt="Haircut 10">
+            </div>
+            <!-- Row 3-->
+            <div class="photo">
+                <img src="11_Elijah_2.JPG" alt="Haircut 11">
+            </div>
+            <div class="photo">
+                <img src="12_Elijah_2.JPG" alt="Haircut 12">
+            </div>
+            <div class="photo">
+                <img src="13_Jason_2.JPG" alt="Haircut 13">
+            </div>
+            <div class="photo">
+                <img src="14_Chester_1.JPG" alt="Haircut 14">
+            </div>
+            <div class="photo">
+                <img src="15_Chester_2.JPG" alt="Haircut 15">
+            </div>
+            <!-- Row 4-->
+            <div class="photo">
+                <img src="16_Ben_1.JPG" alt="Haircut 16">
+            </div>
+            <div class="photo">
+                <img src="17_Ben_2.JPG" alt="Haircut 17">
+            </div>
+            <div class="photo">
+                <img src="18_Ben_3.JPG" alt="Haircut 18">
+            </div>
+            <div class="photo">
+                <img src="19_Cam_1.jpg" alt="Haircut 19">
+            </div>
+            <div class="photo">
+                <img src="20_Cam_2.jpg" alt="Haircut 20">
+            </div>
+            <!-- Row 5 -->
+            <div class="photo">
+                <img src="21_RR_1.JPG" alt="Haircut 21">
+            </div>
+            <div class="photo">
+                <img src="22_RR_2.JPG" alt="Haircut 22">
+            </div>
+            <div class="photo">
+                <img src="23_RR_3.JPG" alt="Haircut 23">
+            </div>
+            <div class="photo">
+                <img src="24_RR_4.JPG" alt="Haircut 24">
+            </div>
+            <div class="photo">
+                <img src="25_Andrew_1.JPG" alt="Haircut 25">
+            </div>
+            <!-- Row 6 -->
+            <div class="photo">
+                <img src="26_Hoang_1.jpg" alt="Haircut 26">
+            </div>
+            <div class="photo">
+                <img src="27_JD_1.jpg" alt="Haircut 27">
+            </div>
+            <div class="photo">
+                <img src="28_JD_2.jpg" alt="Haircut 28">
+            </div>
+            <div class="photo">
+                <img src="29_Dev_1.JPG" alt="Haircut 29">
+            </div>
+            <div class="photo">
+                <img src="30_Dev_2.JPG" alt="Haircut 30">
+            </div>
+        </div>
+    </section>
+
     <section id="appointment">
         <div class="appointment-container">
             <div class="booking-policies">
@@ -351,44 +362,38 @@
                         <input type="tel" id="phone" name="phone" required>
                     </div>
                     <div class="form-group">
-                        <label for="dates">Preferred Dates (with availability for each date):</label>
+                        <label for="dates">Preferred Dates (Up to 3):</label>
                         <textarea id="dates" name="dates" rows="3" required></textarea>
                     </div>
-                    <button type="button" onclick="sendEmail()">Submit</button>
+                    <div class="form-group">
+                        <label>
+                            <input type="checkbox" id="accept-policies" name="accept-policies" required>
+                            I accept the booking policies.
+                        </label>
+                    </div>
+                    <button type="button" onclick="submitAppointmentForm()">Submit</button>                    
                 </form>
             </div>
         </div>
     </section>
 
     <script>
-        function sendEmail() {
+        function submitAppointmentForm() {
             var name = document.getElementById('name').value;
             var phone = document.getElementById('phone').value;
             var dates = document.getElementById('dates').value;
-    
-            if (!name || !phone || !dates) {
-                alert('Please fill all the fields.');
+            var acceptPolicies = document.getElementById('accept-policies').checked;
+            
+            if (!name || !phone || !dates || !acceptPolicies) {
+                alert('Please fill all the fields and accept the booking policies.');
                 return;
             }
-    
-            var templateParams = {
-                name: name,
-                phone: phone,
-                dates: dates
-            };
-    
-            emailjs.send('service_2k9xp7s', 'contact_form', templateParams)
-                .then(function(response) {
-                    console.log('SUCCESS!', response.status, response.text);
-                    alert('Thank you, ' + name + '! Your appointment request has been sent.');
-                    document.getElementById('appointment-form').reset();
-                }, function(error) {
-                    console.log('FAILED...', error);
-                    alert('Failed to send the appointment request. Please try again.');
-                });
+
+            alert('Thank you, ' + name + '! Your appointment request has been received.'); // display a message.
+            document.getElementById('appointment-form').reset(); // clear the form
         }
-    </script>    
-         
+    </script>
+    
 </body>
 </html>
 

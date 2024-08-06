@@ -384,36 +384,31 @@
     </section>
 
     <script>
-        function sendEmail() {
+        // Function to handle form submission
+        function submitAppointmentForm() {
             var name = document.getElementById('name').value;
             var phone = document.getElementById('phone').value;
             var dates = document.getElementById('dates').value;
             var acceptPolicies = document.getElementById('accept-policies').checked;
-    
+
             if (!name || !phone || !dates || !acceptPolicies) {
                 alert('Please fill all the fields and accept the booking policies.');
                 return;
             }
-    
-            var templateParams = {
+
+            // EmailJS configuration
+            emailjs.send("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", {
                 name: name,
                 phone: phone,
                 dates: dates
-            };
-    
-            emailjs.send('service_2k9xp7s', 'contact_form', templateParams)
-                .then(function(response) {
-                    console.log('SUCCESS!', response.status, response.text);
-                    alert('Thank you, ' + name + '! Your appointment request has been sent.');
-                    document.getElementById('appointment-form').reset();
-                }, function(error) {
-                    console.log('FAILED...', error);
-                    alert('Failed to send the appointment request. Please try again.');
-                });
+            }).then(function(response) {
+                alert('Thank you, ' + name + '! Your appointment request has been received.');
+                document.getElementById('appointment-form').reset(); // clear the form
+            }, function(error) {
+                alert('Oops! Something went wrong. Please try again.');
+            });
         }
     </script> 
 
 </body>
 </html>
-
-
